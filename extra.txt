@@ -1,0 +1,10 @@
+AngularJS
+
+I currently know these:
+
+Two-way data binding
+Controller
+Module
+Routing
+View
+Factory/Service

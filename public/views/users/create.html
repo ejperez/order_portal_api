@@ -1,0 +1,80 @@
+<h1>Create User</h1>
+
+<div class="row">
+	<div class="col-md-12 text-right">
+		<a href="#users" class="btn btn-default">Back to list</a>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<form class="form-inline" ng-submit="storeUser()">
+			<input type="hidden" ng-model="formData._token">
+			
+			<div class="row">
+				<div class="col-md-12">
+					<label class="col-md-2">User name</label>
+					<div class="form-group">
+						<input class="form-control" type="text" ng-model="formData.name">
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<label class="col-md-2">E-mail</label>
+					<div class="form-group">
+						<input class="form-control" type="email" ng-model="formData.email">
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<label class="col-md-2">Password</label>
+					<div class="form-group">						
+						<input class="form-control" type="password" ng-model="formData.password">
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<label class="col-md-2">Confirm password</label>
+					<div class="form-group">
+						<input class="form-control" type="password" ng-model="formData.password_confirmation">
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<label class="col-md-2">Role</label>
+					<div class="form-group col-md-10">
+						<div class="row" ng-repeat="role in roles">
+							<div class="col-md-12">
+								<label>							
+									<input type="radio" ng-model="formData.role_id" value="{{ role.id }}">
+									{{ role.name }}
+								</label>								
+							</div>
+							<div class="col-md-12"><em>{{ role.description }}</em></div>
+						</div>						
+					</div>
+				</div>				
+			</div>
+						
+			<div class="row">
+				<div class="col-md-12">
+					<input type="submit" class="btn btn-primary">
+				</div>					
+			</div>
+		</form>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		
+	});
+</script>
